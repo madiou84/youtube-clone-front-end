@@ -12,9 +12,12 @@
     "@headlessui/react": "^1.7.0",
     "@heroicons/react": "^2.0.10",
     "@tailwindcss/aspect-ratio": "^0.4.2",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "path": "^0.12.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
