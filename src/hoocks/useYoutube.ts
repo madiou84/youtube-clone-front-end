@@ -1,4 +1,4 @@
-export const YOUTUBE_BASE_URL = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAeDAi7KvvlqC_2MsZDEOewSiRr71KlE48";
+export const YOUTUBE_BASE_URL = "https://www.googleapis.com/youtube/v3/search?key=";
 const queryParams = "&part=snippet&maxResults=100&type=video";
 
 export interface YoutubeProps {
