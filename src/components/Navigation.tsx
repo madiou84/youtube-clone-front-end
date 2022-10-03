@@ -4,9 +4,9 @@ import {MicrophoneIcon} from '@heroicons/react/24/solid';
 import {Bars3Icon, MagnifyingGlassIcon} from '@heroicons/react/24/outline';
 
 import {MobileMenu} from "./MobileMenu";
-import {Icon} from "../../../utils/Icon";
-import {classNames, navigation} from "../../../utils";
-import {AuthButton} from "../../../shared/AuthButton";
+import {Icon} from "../utils/Icon";
+import {classNames, navigation} from "../utils";
+import {AuthButton} from "../shared/AuthButton";
 
 export default function Navigation() {
     const [open, setOpen] = useState(false);

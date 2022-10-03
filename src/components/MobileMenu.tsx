@@ -2,7 +2,7 @@ import {Dialog, Tab, Transition} from "@headlessui/react";
 import {Fragment} from "react";
 import {XMarkIcon} from "@heroicons/react/24/outline";
 // @ts-ignore
-import {classNames, navigation} from "../../../utils";
+import {classNames, navigation} from "../utils";
 
 export function MobileMenu({open, setOpen}: { setOpen: (value: boolean) => void, open: boolean }) {
     return (

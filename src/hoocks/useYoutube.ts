@@ -63,19 +63,28 @@ export interface YoutubePropsItem {
     snippet: Snippet
 }
 
-export async function useFetch(url: string, options: any) {
-    const response: YoutubeProps = await fetch(url, options).then(r => r.json());
+export async function useFetch(url: string, options?: any) {
+    const response = await fetch(url, options).then(r => r.json());
+    
     if (response?.error?.code === 403) {
-        throw new Error("Daily requests are reached")
+        throw new Error("Daily requests are reached");
+    }
+
+    if (response?.status !== 200) {
+        return {
+            error: true,
+            data: null,
+            status: response?.status,
+        }
     }
 
     return {
-        error: null,
-        status: null,
+        error: false,
+        status: 200,
         data: response.items,
     }
 }
 
 export async function useYoutube() {
-    return await useFetch(`${YOUTUBE_BASE_URL}${queryParams}`, {});
+    return await useFetch(`${YOUTUBE_BASE_URL}${queryParams}`);
 }
